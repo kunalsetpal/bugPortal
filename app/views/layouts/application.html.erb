@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>BugPortal</title>
+	
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+    <!--  Paper Dashboard core CSS    -->
+    <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+
+
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag "animate.min"%>
+    <%= stylesheet_link_tag "themify-icons"%>
+    <%= stylesheet_link_tag "paper-dashboard"%>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+		<div class="wrapper">
+			<div class="sidebar" data-background-color="black" data-active-color="danger">
+
+		    <!--
+				Tip 1: you can change the color of the sidebar's background using: data-background-color="white | black"
+				Tip 2: you can change the color of the active button using the data-active-color="primary | info | success | warning | danger"
+			-->
+
+		    	<div class="sidebar-wrapper">
+		            <div class="logo">
+		                <a href="#" class="simple-text">
+		                    BugPortal
+		                </a>
+		            </div>
+
+		            <ul class="nav">
+		                <li class="active">
+		                    <a href="#">
+		                        <i class="ti-pie-chart"></i>
+		                        <p>JDT</p>
+		                    </a>
+		                </li>
+
+		                <li>
+		                    <a href="#">
+		                        <i class="ti-pie-chart"></i>
+		                        <p>Eclipse</p>
+		                    </a>
+		                </li>
+
+		            </ul>
+		    	</div>
+		    </div>
+
+		    <div class="main-panel">
+				<nav class="navbar navbar-default">
+		            <div class="container-fluid">
+		                <div class="navbar-header">
+		                    <button type="button" class="navbar-toggle">
+		                        <span class="sr-only">Toggle navigation</span>
+		                        <span class="icon-bar bar1"></span>
+		                        <span class="icon-bar bar2"></span>
+		                        <span class="icon-bar bar3"></span>
+		                    </button>
+		                    <a class="navbar-brand" href="#">Template</a>
+		                </div>
+		                <div class="collapse navbar-collapse">
+		                    <ul class="nav navbar-nav navbar-right">
+		                        <li>
+		                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		                                <i class="ti-panel"></i>
+										<p>Duplicate bugs</p>
+		                            </a>
+		                        </li>
+		                        <li>
+		                            <a href="#">
+										<i class="ti-settings"></i>
+										<p>Dependent Bugs</p>
+		                            </a>
+		                        </li>
+		                        <li class="dropdown">
+		                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		                                    <i class="ti-bell"></i>
+		                                    <p class="notification">2</p>
+											<p>Views</p>
+											<b class="caret"></b>
+		                              </a>
+		                              <ul class="dropdown-menu">
+		                                <li><a href="#">Graphs</a></li>
+		                                <li><a href="#">Tables</a></li>
+		                              </ul>
+		                        </li>
+		                    </ul>
+
+		                </div>
+		            </div>
+		        </nav>
+
+		       
+		        <div class="content">
+		            <div class="container-fluid">
+		                <div class="row">
+		                	<%= yield %>
+		                </div>
+		            </div>
+		        </div>
+
+
+		        <footer class="footer">
+		            <div class="container-fluid">
+		                <nav class="pull-left">
+		                    <ul>
+
+		                        <li>
+		                            <a href="#">
+		                                Home
+		                            </a>
+		                        </li>
+		                    </ul>
+		                </nav>
+						<div class="copyright pull-right">
+		                    &copy; <script>document.write(new Date().getFullYear())</script>, made in Ruby on Rails By<i class="fa fa-heart heart"></i> by <a href="http://www.kunalsetpal.com">Kunal Setpal</a>
+		                </div>
+		            </div>
+		        </footer>
+
+		    </div>
+		</div>
+
+  </body>
+</html>
